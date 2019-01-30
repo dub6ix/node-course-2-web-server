@@ -25,12 +25,12 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use((req, res, next) => {
-  res.render('maintenance.hbs', {
-    pageTitle: 'We\'ll be right back.',
-    message: 'Could not proccess'
-  })
-});
+// app.use((req, res, next) => {
+//   res.render('maintenance.hbs', {
+//     pageTitle: 'We\'ll be right back.',
+//     message: 'Could not proccess'
+//   })
+// });
 
 hbs.registerHelper('getCurrentYear', () => {
   return new Date().getFullYear();
@@ -50,6 +50,13 @@ app.get('/', (req, res) => {
 app.get('/about', (req, res) => {
   res.render('about.hbs', {
     pageTitle: 'About Page',
+  });
+});
+
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    pageTitle: 'Projects',
+    message: 'This is all the amazing things that I do!'
   });
 });
 
