@@ -42,8 +42,8 @@ hbs.registerHelper('screamIt', (text) => {
 
 app.get('/', (req, res) => {
   res.render('home.hbs', {
-    pageTitle: 'Home',
-    welcomeMessage: 'Welcome to the website of the future.',
+    pageTitle: 'Hey lil\' ham...',
+    welcomeMessage: 'I love you!',
   });
 });
 
